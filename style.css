@@ -1,0 +1,1106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+
+#create_case {
+    display: flow;
+}
+
+#customize {
+    display: flow;
+}
+
+#step_active_id2 {
+    color: #888;
+    font-weight: unset;
+}
+
+#step_id2 {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+#step3_1 {
+    color: #888;
+    font-weight: unset;
+}
+
+#step3_3 {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.uploading-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #27ae60;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.auth-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://files.printo.in/site/20220526_175333057040_18b16a_Premium-qulity.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container-cus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent background */
+    padding: 22px 34px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logout {
+    margin-bottom: 30px;
+}
+
+.form-box header {
+    font-size: 25px;
+    font-weight: 600;
+    color: #27ae60;
+    margin-bottom: -19px;
+}
+
+.form-box form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-box form .field label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-box form .input input {
+    height: 45px;
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-box form .input input:focus {
+    border-color: #27ae60;
+}
+
+.btn {
+    height: 45px;
+    background: #27ae60;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #7cc198;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: #27ae60;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    background: #f9eded;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #27ae60;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navtwo {
+    display: flex;
+}
+
+.left-links {
+    margin-right: 30px;
+    border: solid #27ae60;
+    background-color: #27ae60;
+    border-radius: 6px;
+    padding: 3px 8px;
+    display: flex;
+}
+
+.left-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+}
+
+.case {
+    color: black;
+    /* White color for "Case" */
+}
+
+.cobra {
+    color: #27ae60;
+    /* Green color for "Cobra" */
+}
+
+
+.nav .logo a {
+    font-size: 24px;
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav .right-links a {
+    font-size: 20px;
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.right-links a:hover {
+    color: #7cc198;
+}
+
+.fas fa-user-circle {
+    font-size: 32px;
+    /* Larger logo size */
+    font-weight: 700;
+}
+
+/* Profile Icon Link */
+.profile-icon-logo {
+    font-size: 32px;
+    /* Larger icon size */
+    font-weight: 700;
+    /* Bold icon */
+    color: black;
+    /* Icon color */
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    /* Adds padding to top/bottom (10px) and left/right (20px) */
+    background-color: #27ae60;
+    /* Red color for the logout button */
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #7cc198;
+    /* Darker red on hover */
+}
+
+/* Custom Case Section Styles */
+.custom-case-section {
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    width: 100%;
+    /* Make sure the section spans the full width */
+}
+
+.custom-case-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    /* Set a maximum width for the container */
+    margin: 0 auto;
+    /* Center the container */
+    padding: 0 20px;
+    /* Add some horizontal padding */
+}
+
+.text-area {
+    flex: 1 1 40%;
+    padding: 20px;
+}
+
+.your-image-text {
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    /* Makes it a block element for better spacing */
+}
+
+.your-image {
+    display: flex;
+    width: 163px;
+}
+
+.custom-case-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.custom-text {
+    color: #27ae60;
+    /* Green color for "Custom Phone Case" */
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.features li {
+    margin-bottom: 10px;
+}
+
+.features i {
+    color: #27ae60;
+    /* Green checkmark icons */
+    margin-right: 10px;
+}
+
+.review-area {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: gold;
+    /* Gold stars */
+    margin-right: 10px;
+}
+
+.field {
+    margin-top: 16px;
+}
+
+.btn {
+    margin-top: 16px;
+}
+
+.image-area {
+    flex: 1 1 40%;
+    text-align: center;
+    margin-top: 43px;
+}
+
+.image-area img {
+    max-width: 100%;
+    /* Keep this to ensure it scales down on smaller screens */
+    width: 294px;
+    /* Adjust this value to your desired width */
+    height: auto;
+}
+
+.your-image-text img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    /* Example: limits the height to 500 pixels */
+    margin: 0 auto;
+}
+
+.steps-container {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px dashed #ccc;
+    margin: 13vh auto auto;
+    /* Add margin for spacing */
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    /* Adjust width as needed */
+}
+
+.guide {
+    /* Remove flex properties */
+    width: 80%;
+    margin: 3vh auto;
+    /* Center the guide */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.step-box {
+    text-align: center;
+    flex: 1;
+    /* Distribute available space equally among boxes */
+}
+
+.step {
+    font-size: 16px;
+    /* Slightly smaller font size */
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.step.active {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #888;
+}
+
+.step-separator {
+    width: 20px;
+    /* Adjust width as needed */
+    height: 82px;
+    /* Adjust height as needed */
+    stroke: #ccc;
+    /* Same color as upload area border */
+}
+
+.upload-area {
+    width: 100%;
+    height: 300px;
+    /* Adjust height as needed */
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    /* For positioning the image preview */
+}
+
+.drag-drop-area {
+    text-align: center;
+}
+
+.drag-drop-area i {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.drag-drop-area p {
+    font-size: 16px;
+    color: #888;
+}
+
+.footer {
+    padding: 15px 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer.links {
+    margin-top: 10px;
+}
+
+.footer.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+
+.phone_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.case-wrapper {
+    position: relative;
+    width: 200px;
+    height: 400px;
+}
+
+.phone-case {
+    left: -1px;
+    right: 0px;
+    position: absolute;
+    width: 197px;
+    height: 400px;
+    z-index: 2;
+}
+
+.card {
+    position: relative;
+    width: 195px;
+    height: 399px;
+    background: #131f76;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: 104px;
+}
+
+.controls{
+    margin-left: 20px;
+}
+.control-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* Ensure canvas remains transparent */
+}
+
+
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 140px;
+}
+
+.section1 {
+    padding: 0px 30px 0px 0px;
+    background-color: #e5e7eb;
+    width: 40vw;
+    height: 600px;
+    /* margin: 0px 298px 0px 32px; */
+    position: relative;
+    height: 535px;
+}
+
+.section2 {
+    padding: 20px;
+    background-color: white;
+    width: 358px;
+}
+
+.option {
+    margin-bottom: 15px;
+}
+
+.option label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.option select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.continue-button {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.color-option {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 2px solid #4e4e4e;
+}
+
+.color-option.black {
+    background-color: black;
+}
+
+.color-option.navy {
+    background-color: navy;
+}
+
+.color-option.maroon {
+    background-color: maroon;
+}
+
+/*wavy dont animation*/
+
+.saving-animation .dot {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+.saving-animation .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.saving-animation .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.saving-animation .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*summary*/
+
+.summary_container {
+    display: flex;
+    /* align-items: flex-start; */
+    /* max-width: 977px; */
+    margin: 20px 152px 0px 154px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+}
+
+.summary-details {
+    margin-right: 20px;
+    margin-left: 70px;
+}
+
+#case-summary {
+    margin-top: 28px;
+}
+
+#case-summary img {
+    width: 197px;
+    height: 400px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.status {
+    color: #5cb85c;
+    /* Green for "In stock" */
+    margin-bottom: 20px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* Align items horizontally */
+    gap: 20px;
+}
+
+.highlights,
+.materials {
+    flex: 1;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.price {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    /* Light gray separator */
+    padding-top: 10px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    /* Reduced margin for clarity */
+}
+
+.order-total {
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+#summaryDownloadButton {
+    background-color: rgb(218, 112, 214);
+    /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    background-color: #5cb85c;
+    /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+    /* Align to the right */
+}
+
+.checkout-button:hover {
+    background-color: #4cae4c;
+    /* Darker green on hover */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.review-body{
+    flex-direction: column;
+}
+
+/* Global Styles */
+.review-body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Review Card */
+.review-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading */
+.review-h2 {
+    margin-bottom: 20px;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* Form */
+.review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-review {
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+}
+
+/* Select Dropdown */
+.select-review {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+/* Textarea */
+.textarea-review {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.textarea-review:focus {
+    border-color: #27ae60;
+}
+
+/* Submit Button */
+.btn-review {
+    background-color: #27ae60;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.btn-review:hover {
+    background-color: #219150;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .review-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .checkout-button {
+        float: left;
+    }
+}
+
+@media (max-width: 1053px) {
+    .card {
+        
+        margin-left: 50px;
+    }
+}
+/* Responsive adjustments if needed */
+@media (max-width: 932px) {
+
+    .card {
+        position: relative;
+        width: 195px;
+        height: 399px;
+        background: #131f76;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin-left: 15px;
+    }
+    
+    .controls{
+        margin-left: 20px;
+    }
+    .control-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .summary_container {
+        display: flex;
+        flex-direction: column;
+        /* Default to column layout on smaller screens */
+        align-items: center;
+        /* Center content horizontally */
+        margin: 20px auto;
+        /* Center container with margin */
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        justify-content: space-around;
+        width: 90%;
+        /* Adjust width for smaller screens */
+    }
+
+    .summary-details {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #case-summary {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        /* Center the image */
+    }
+
+    #case-summary img {
+        width: 80%;
+        /* Make image responsive */
+        max-width: 300px;
+        /* Limit image width */
+        height: auto;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        /* Stack details vertically on smaller screens */
+        gap: 20px;
+        width: 100%;
+        /* Make details span full width */
+    }
+
+    .steps {
+        flex-direction: column;
+        /* Stack steps vertically on mobile */
+        align-items: center;
+    }
+
+    .text-area,
+    .image-area {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        /* Add space between elements when stacked */
+    }
+
+    .custom-case-section {
+        padding-top: 100px;
+        /* Adjust top padding for smaller screens */
+    }
+
+    .left-links {
+        margin-right: 8px;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    .fas fa-user-circle profile-icon-logo {
+        display: flex;
+    }
+
+    .container {
+        width: 118%;
+    }
+
+    .form-box {
+        margin-top: 0px;
+    }
+
+    .nav .logo a {
+        font-size: 20px;
+    }
+
+    .profile-icon-logo {
+        margin-left: 4px;
+        margin-top: 5px;
+        font-size: 27px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .custom-case-content {
+        flex-direction: row;
+        /* Align items from left to right */
+        align-items: flex-start;
+        /* Align items to the top */
+    }
+
+    .text-area,
+    .image-area {
+        width: 48%;
+        /* Adjust the width as needed */
+    }
+
+    .text-area {
+        text-align: left;
+        /* Align text to the left */
+    }
+
+    .features li {
+        display: flex;
+        /* Enable flexbox for list items */
+        align-items: center;
+        /* Vertically align tick and text */
+    }
+
+    .features li i {
+        margin-right: 10px;
+        /* Add some space between the tick and text */
+    }
+
+    .steps-container {
+        flex-direction: column;
+        /* Stack steps vertically on mobile */
+        align-items: center;
+        width: 90%;
+    }
+
+    .step-box {
+        margin-bottom: 10px;
+        /* Add space between steps */
+        width: 100%;
+        /* Make step boxes span full width */
+        position: relative;
+        /* To position the separator line */
+    }
+
+    .step-box::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        /* Adjust spacing as needed */
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        /* Use the same color as the dashed border */
+    }
+
+    .step-box:last-child::after {
+        display: none;
+        /* Hide separator after the last step */
+    }
+
+    .step-separator {
+        display: none;
+        /* Hide separators on mobile */
+    }
+
+    .parent-container {
+        flex-direction: column;
+    }
+
+    .section1 {
+        width: 360px;
+    }
+
+}
